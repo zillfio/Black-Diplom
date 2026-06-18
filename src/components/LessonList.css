@@ -1,0 +1,80 @@
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.25rem;
+  transition: border-color 0.2s;
+}
+
+.lesson-item--active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.lesson-item--completed .lesson-item__number {
+  background: var(--success);
+  color: white;
+}
+
+.lesson-item__main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+}
+
+.lesson-item__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+}
+
+.lesson-item--active .lesson-item__number {
+  background: var(--accent);
+  color: white;
+}
+
+.lesson-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.lesson-item__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.lesson-item__meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.lesson-item__complete {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
